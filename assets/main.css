@@ -1,0 +1,357 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+
+* {
+	/* transition: .3s; */
+	/* transition-property: color, background-color, border, fill, opacity; */
+	padding: 0;
+	margin: 0;
+	font-family : 'Findcreek', sans-serif;
+	font-weight: 500;
+	color: #242424;
+	box-sizing: border-box;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
+}
+
+.custom-scrollbar {
+	/* padding-right: 8px; */
+	scrollbar-gutter: stable;
+}
+.custom-scrollbar::-webkit-scrollbar {
+	width: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+	background-color: #14161a;
+	/* background-color: rgba(0, 0, 0, 0); */
+  }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #f5f5f750;
+	/* border-radius: 8px 0 0 8px; */
+	border-radius: 8px;
+  }
+
+
+*::selection {
+	background-color: rgba(0, 0, 0, .6);
+	color: #fff;
+}
+
+body {
+	-webkit-font-smoothing: subpixel-antialiased;
+	min-height: 100vh;
+}
+
+input.error {
+	background-color: #ee423830 !important;
+	border-color: #ee423850 !important;
+}
+input {
+	transition: .2s;
+    border: 1px solid transparent;
+}
+
+.loading::after {
+    position: absolute;
+    /* top: 50%; */
+	/* transform: translateY(-50%); */
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-image: url('https://findcreek.com/assets/img/icons/3d-cube-sphere.svg');
+	animation: 2s rotate forwards infinite;
+	content: '';
+	height: 30px;
+	width: 30px;
+	background-size: cover;
+	filter: invert(1);
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+.popup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+.popup.show {
+	display: flex;
+	animation: .2s showPopup forwards;
+}
+.popup.show .panel {
+	/* top: 0px; */
+	animation: .3s slidedownPopupPanel forwards;
+}
+@keyframes showPopup {
+	from {
+		display: none;
+		opacity: 0;
+	}	
+	to {
+		display: flex;
+		opacity: 1;
+	}
+}
+@keyframes slidedownPopupPanel {
+	from {
+		top: -30px;
+	}	
+	to {
+		top: 0px;
+	}
+}
+.popup .background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	backdrop-filter: blur(4px);
+	z-index: 201;
+}
+.popup .panel {
+	transition: .3s;
+	position: relative;
+	top: 0px;
+	left: 0;
+	padding: 67px 92px 73px 92px;
+	background-color: #fff;
+	z-index: 202;
+	border-radius: 15px;
+}
+.popup .panel .close {
+	transition: .15s !important;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	opacity: .2;
+	cursor: pointer;
+	width: 55px;
+	padding: 10px;
+}
+.popup .panel .close img {
+	width: 100%;
+}
+.popup .panel .close:hover {
+	opacity: .5;
+}
+.popup .panel h2.title {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 2.25rem;
+}
+
+
+.btn {
+	transition: .1s;
+	text-decoration: none;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.btn a {
+	line-height: 0px;
+	text-decoration: none;
+	color: inherit;
+
+	transition: .1s;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 260px;
+	font-weight: 800;
+	font-size: 1.0625rem;
+	border-radius: 13px;
+	border: none;
+	cursor: pointer;
+	line-height: 0px;
+}
+
+.btn1 {
+	transition: .1s;
+	font-weight: 800;
+	font-size: 1.0625rem;
+	border-radius: 13px;
+	border: none;
+
+	background: linear-gradient(10deg, #634EB6, #8B6FFF);
+	color: #fff;
+}
+.btn1:hover {
+	opacity: .9;
+}
+
+.btn2 a {
+	transition: .1s;
+	font-weight: 800;
+	font-size: 1.0625rem;
+	border-radius: 12px;
+	border: none;
+	height: calc(40px - 2px);
+	width: calc(260px - 2px);
+
+
+	background-color: #14161a;
+	color: #fff;
+}
+.btn2 .background {
+	position: absolute;
+	width: calc(100% + 2px);
+	height: calc(100% + 0px);
+	top: 0px;
+	left: -1px;
+	content: '';
+	border-radius: 13px;
+	transform:translateZ(0);
+	background: linear-gradient(90deg, #C96F6F 0%, rgba(255, 255, 255, 0.51) 49.42%, #6572E8 99.89%);
+	z-index: 0;
+}
+.btn2:hover a {
+	opacity: .95;
+}
+
+.btn3 {
+	transition: .1s;
+	font-weight: 500;
+	font-size: 1.0625rem;
+	border-radius: 13px;
+	border: none;
+	width: 330px;
+	background-color: #504cfe;
+	color: #fff;
+}
+.btn3:hover {
+	opacity: .9;
+}
+
+.btn4 {
+	transition: .1s;
+	font-weight: 500;
+	font-size: 1.0625rem;
+	border-radius: 13px;
+	width: 330px;
+	border: 1px solid #2997FF;
+	background-color: transparent;
+	color: #2997FF;
+}
+.btn4:hover {
+	background-color: #2997FF20;
+}
+
+
+.accent-link {
+	transition: .1s;
+	color: #504cfe;
+	font-size: 1rem;
+	font-weight: 500;
+	text-decoration: none;
+}
+.accent-link:hover {
+	opacity: .8;
+}
+
+
+.cards {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: -20px;
+}
+.cards .card {
+	position: relative;
+	border-radius: 18px;
+	background-color: #fff;
+	box-shadow: 0px 0px 36px 0px #0000001A;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.cards .card:nth-last-child(1) {
+	margin-right: 0;
+}
+.cards .card::before {
+	position: absolute;
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	content: '';
+	top: -1px;
+	left: -1px;
+	z-index: -1;
+	border-radius: 19px;
+	background: linear-gradient(to bottom, transparent, #dccffd50);
+}
+
+.card-slider {
+	display: flex;
+	justify-content: unset;
+	/*overflow-x: scroll;*/
+}
+.card-slider .cards {
+	transition: .3s;
+	width: auto;
+	flex-wrap: nowrap;
+	/*overflow-y: scroll;*/
+}
+
+.card-slider .card-slider-arrow {
+	transition: .1s;
+	position: absolute;
+	z-index: 10;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, .8);
+	backdrop-filter: blur(4px);
+	content: '';
+	box-shadow: 0px 0px 36px 0px #0000001A;
+	border: 1px solid #dccffd70;
+	cursor: pointer;
+}
+.card-slider .card-slider-arrow::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url('https://findcreek.com/assets/img/icons/chevron-right.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 30px;
+	/*background-color: #fff;*/
+	content: '';
+}
+.card-slider .card-slider-arrow:hover {
+	background-color: #dccffd20;
+}
+.card-slider .card-slider-arrow.hidden {
+	display: none;
+}
+.card-slider .arrow-left {
+	left: 70px;
+}
+.card-slider .arrow-left::after {
+	transform: rotate(-180deg);
+}
+.card-slider .arrow-right {
+	right: 70px;
+}

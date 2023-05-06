@@ -1,0 +1,333 @@
+body {
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+main .container {
+	position: relative;
+	width: 100%;
+	max-width: 1440px;
+	padding: 0px 90px;
+}
+
+header .header {
+	/*border: 1px solid;*/
+}
+
+
+.colorized-text {
+	color: #2997ff;
+}
+
+
+section {
+	width: 100%;
+	padding-top: 110px;
+	display: flex;
+	justify-content: center;
+
+	/*padding-left: 90px;*/
+	/*padding-right: 90px;*/
+}
+section.black {
+	background-color: #14161a;
+}
+section.white {
+	/*background-color: #f5f5f7;*/
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+.buttons .btn {
+	height: 40px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	align-items: center;
+}
+.buttons .btn:nth-last-child(1) {
+	margin-bottom: 0;
+}
+
+section.hello {
+	min-height: 665px;
+	padding-top: 200px;
+	padding-bottom: 100px;
+}
+section.hello h2 {
+	font-weight: 700;
+	color: #fff;
+	font-size: 2.75rem;
+	width: 720px;
+	max-width: 100%;
+	line-height: 57px;
+	margin-bottom: 25px;
+}
+section.hello h2 span {
+	font-weight: 700;
+}
+section.hello h3 {
+	font-weight: 400;
+	color: rgba(255, 255, 255, .9);
+	font-size: 1.0625rem;
+	width: 640px;
+	max-width: 100%;
+	line-height: 27px;
+	margin-bottom: 60px;
+}
+
+.section-title {
+	font-size: 3.125rem;
+	font-weight: 700;
+	color: #7E7E7E;
+	margin-bottom: 60px;
+}
+.section-title b {
+	font-weight: 700;
+	color: #242424;
+}
+
+
+section.services .cards .card {
+	width: 400px;
+	height: 480px;
+	padding: 50px 33px 30px 33px;
+}
+section.services .card .card-content .image {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section.services .card .card-content .img {
+	border-radius: 50%;
+	border: 4px solid #6F57FF;
+	width: 170px;
+	height: 170px;
+}
+section.services .card .card-content .img img {
+	border-radius: 50%;
+	border: 4px solid #fff;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+section.services .card .card-content .image {
+	margin-bottom: 35px;
+}
+section.services .card .card-content .description {
+	margin-bottom: 35px;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #242424;
+	text-align: center;
+}
+section.services .cards .card .card-header h3 {
+	font-size: 1.6875rem;
+	color: #242424;
+
+	height: 90px;
+	margin-bottom: 10px;
+}
+
+
+section.advantages .cards .card {
+	width: 500px;
+	/*height: 185px;*/
+	padding: 30px 35px 25px 35px;
+}
+section.advantages .card-slider {
+	height: 200px;
+	/*overflow-y: hidden;*/
+}
+
+section.advantages .card-slider .card {
+	margin-right: 24px;
+	height: auto;
+}
+section.advantages .card-slider .card h3 {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #7E7E7E;
+	margin-bottom: 15px;
+}
+section.advantages .card-slider .card h4 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: #242424;
+	line-height: 25.14px;
+}
+section.advantages .card-slider .card-slider-arrow {
+	bottom: 85px;
+	/*transform: translateY(-50%);*/
+}
+
+section.order .order-form {
+	position: relative;
+	width: 100%;
+	padding: 3.125rem 3.75rem 3.75rem 3.125rem;
+	background-color: #fff;
+	box-shadow: 0px 0px 36px 0px #0000001A;
+	border-radius: 18px;
+}
+section.order .order-form h3 {
+	font-size: 2.25rem;
+	color: #242424;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+
+section.order .radio-buttons {
+	display: flex;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+section.order .radio-buttons button {
+	transition: .1s;
+	height: 50px;
+	padding: 0 50px;
+	border-radius: 13px;
+	border: 1px solid #504CFEB2;
+	color: #504CFEB2;
+	font-size: 1.125rem;
+	font-weight: 500;
+	background-color: transparent;
+	cursor: pointer;
+	margin-right: 30px;
+	white-space: nowrap;
+	margin-bottom: 20px;
+}
+section.order .radio-buttons button.selected {
+	background-color: #504CFE;
+	border-color: #504CFE;
+	color: #fff;
+
+}
+section.order .radio-buttons button:hover {
+	background-color: #504CFE10;
+}
+section.order .radio-buttons button.selected:hover {
+	background-color: #504CFE;
+	opacity: .9;
+}
+
+section.order .form-content {
+	display: flex;
+	justify-content: space-between;
+
+}
+section.order .inputs {
+	display: flex;
+	flex-direction: column;
+}
+section.order .inputs input {
+	height: 50px;
+	width: 370px;
+	border-radius: 25px;
+	background-color: #EFF3F7;
+	color: #242424;
+	font-size: 1.125rem;
+	font-weight: 500;
+	margin-bottom: 25px;
+	/*border: none;*/
+	padding: 0 30px;
+}
+section.order .inputs input:nth-last-child(1) {
+	margin-bottom: 0;
+}
+section.order .inputs input::placeholder {
+	color: #5C5C5CCC;
+}
+section.order .send {
+	display: flex;
+	align-items: flex-end;
+	margin-top: 50px;
+}
+section.order .send button {
+	position: relative;
+	transition: .1s;
+	height: 50px;
+	width: 250px;
+	padding: 0 50px;
+	border-radius: 13px;
+	border: none;
+	color: #fff;
+	font-size: 1.125rem;
+	font-weight: 500;
+	background-color: #504CFE;
+	cursor: pointer;
+	/*margin-right: 30px;*/
+	overflow: hidden;
+}
+section.order .send button:hover {
+	opacity: .9;
+}
+section.order .send button div {
+	transition: .2s;
+	position: absolute;
+	color: inherit;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	top: 150%;
+}
+
+section.order .send button.keyframe-send .send-step-1 {
+	top: 50%;
+}
+section.order .send button.keyframe-send .send-step-2, section.order .send button.keyframe-send .send-step-3  {
+	top: 150%;
+}
+
+
+section.order .send button.keyframe-sending .send-step-1  {
+	animation: hideButtonText .3s forwards;
+}
+section.order .send button.keyframe-sending .send-step-2  {
+	animation: showButtonText .3s forwards;
+}
+
+
+section.order .send button.keyframe-sended .send-step-2  {
+	animation: hideButtonText .3s forwards;
+}
+section.order .send button.keyframe-sended .send-step-3  {
+	animation: showButtonText .3s forwards;
+}
+
+section.order .send button.keyframe-error .send-step-2  {
+	animation: hideButtonText .3s forwards;
+}
+section.order .send button.keyframe-error .send-step-4  {
+	animation: showButtonText .3s forwards;
+}
+
+
+
+@keyframes showButtonText {
+	from {
+		top: 150%;
+	}
+	to {
+		top: 50%;
+	}
+}
+@keyframes hideButtonText {
+	from {
+		top: 50%;
+	}
+	to {
+		top: -150%;
+	}
+}

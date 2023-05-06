@@ -1,0 +1,119 @@
+@media screen and (max-width: 991px) {
+    header .user-info .btn {
+        display: none;
+    }
+    section.order .form-content {
+        flex-direction: column;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .header {
+        padding: 0 20px !important;
+        margin-top: 20px !important;
+    }
+    section.services .cards .card {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    section.order .form-content {
+        flex-direction: column;
+
+    }
+    section.order .radio-buttons {
+        flex-direction: column;
+
+    }
+    section.order .radio-buttons button {
+        width: 100%;
+        margin-bottom: 15px;
+        white-space: unset;
+    }
+    section.order input {
+        width: 100% !important;
+    }
+    section.order .send {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 730px) {
+    header .col-2 {
+        display: none !important;
+    }
+    section.hello {
+        padding-top: 130px;
+    }
+    .container {
+        padding: 0 45px !important;
+    }
+}
+@media screen and (max-width: 701px) {
+    .container {
+        padding: 0 20px !important;
+    }
+    .card-slider .arrow-left {
+        left: 10px !important;
+    }
+    .card-slider .arrow-right {
+        right: 10px !important;
+    }
+    section.hello .buttons {
+        justify-content: space-around;
+    }
+    section {
+        padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    section.hello .buttons {
+        flex-direction: column;
+    }
+    section.hello .buttons .btn {
+        width: 100%;
+    }
+    section.hello .buttons .btn a {
+        width: 100%;
+    }
+
+    section.services .card {
+        width: 80%;
+    }
+    section.services .card .btn {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    section.advantages .card-slider {
+        margin-left: -20px;
+    }
+    section.advantages .card {
+        width: calc(100vw - 120px) !important;
+        margin: 0 20px !important;
+    }
+    section.advantages .card-slider-arrow {
+        display: none;
+    }
+    section.advantages .card-slider {
+        height: auto;
+        /*overflow-x: scroll;*/
+    }
+    section.advantages .card-slider::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    section.services .card {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 361px) {
+    :root {
+        font-size: 14px;
+    }
+}
