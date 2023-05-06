@@ -147,10 +147,18 @@ section.advantages .cards .card {
 	padding: 30px 35px 25px 35px;
 }
 section.advantages .card-slider {
-	height: 200px;
+	/*height: 200px;*/
+	padding-top: 40px;
+	padding-bottom: 50px;
+	margin-top: -60px;
+	margin-bottom: -60px;
+	width: 100%;
 	/*overflow-y: hidden;*/
 }
 
+section.advantages .card-slider .cards {
+
+}
 section.advantages .card-slider .card {
 	margin-right: 24px;
 	height: auto;

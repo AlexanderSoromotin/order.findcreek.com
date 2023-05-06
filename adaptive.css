@@ -99,7 +99,8 @@
     }
     section.advantages .card-slider {
         height: auto;
-        /*overflow-x: scroll;*/
+        overflow-x: scroll;
+        width: 100vw;
     }
     section.advantages .card-slider::-webkit-scrollbar {
         display: none;
@@ -107,6 +108,22 @@
     }
 
 }
+
+@media screen and (max-width: 450px) {
+    section.order .order-form {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    section h2 {
+        font-size: 2.5rem !important;
+    }
+    section.order h3 {
+        font-size: 1.5rem !important;
+    }
+    .section-title {
+        margin-bottom: 40px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     section.services .card {
         width: 90%;
@@ -115,5 +132,11 @@
 @media screen and (max-width: 361px) {
     :root {
         font-size: 14px;
+    }
+    section.hello h2 {
+        line-height: 50px;
+    }
+    section.advantages .card-slider .card {
+        padding: 20px 25px 15px 25px;
     }
 }

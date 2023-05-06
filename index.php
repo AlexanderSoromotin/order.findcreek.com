@@ -2,7 +2,7 @@
 	include_once "inc/config.php";
 //	include_once "inc/main.php";
 
-	$css_ver = 1;
+	$css_ver = 2;
 ?>
 
 <!DOCTYPE html>
