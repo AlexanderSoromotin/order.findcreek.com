@@ -156,7 +156,7 @@
                     <div class="form-content">
                         <div class="inputs">
                             <input class="" type="text" name="name" placeholder="Ваше имя">
-                            <input class="" type="text" name="mail" placeholder="Ваш email">
+                            <input class="" type="text" name="email" placeholder="Ваш email">
                         </div>
                         <div class="send">
                             <button class="send-form keyframe-send">
@@ -297,7 +297,7 @@
 
             $('section.order .send-form').addClass('keyframe-sending').removeClass('keyframe-send');
             $.ajax({
-                url: "<?= $apiUrl ?>/id/order.create",
+                url: "<?= $apiUrl ?>/id/order.create/",
                 method: "post",
                 cache: false,
                 data: {
