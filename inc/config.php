@@ -2,6 +2,10 @@
 
 include_once 'secret.php';
 
+if (!isset($localSite)) {
+    $localSite = 0;
+}
+
 $link = 'https://order.findcreek.com';
 $localSiteLink = 'http://order-findcreek.com';
 
@@ -24,104 +28,12 @@ if ($localSite) {
 	error_reporting(0); 
 }
 
-$connection_apiFindcreek;
-$connection_findcreekId;
-$connection_mark;
 
-$dbConnectParams = array(
-	"findcreek_id" => array(
-		"db_url" => "localhost",
-		"db_username" => "findcreek",
-		"db_password" => $db_password,
-		"db_name" => "findcreek_id"
-	),
-	"findcreek_api" => array(
-		"db_url" => "localhost",
-		"db_username" => "findcreek",
-		"db_password" => $db_password,
-		"db_name" => "findcreek_api"
-	),
-	"findcreek_mark" => array(
-		"db_url" => "localhost",
-		"db_username" => "findcreek",
-		"db_password" => $db_password,
-		"db_name" => "mark"
-	)
-);
 
 if ($localSite) {
-	$dbConnectParams['findcreek_id']['db_url'] = "127.0.0.1"; 
-	$dbConnectParams['findcreek_id']['db_username'] = "root";
-	$dbConnectParams['findcreek_id']['db_password'] = "";
-
-	$dbConnectParams['findcreek_api']['db_url'] = "127.0.0.1"; 
-	$dbConnectParams['findcreek_api']['db_username'] = "root";
-	$dbConnectParams['findcreek_api']['db_password'] = "";
-
-	$dbConnectParams['findcreek_mark']['db_url'] = "127.0.0.1"; 
-	$dbConnectParams['findcreek_mark']['db_username'] = "root";
-	$dbConnectParams['findcreek_mark']['db_password'] = "";
-
 	$link = $localSiteLink;	
 	$idUrl = "http://id-findcreek.com";
 	// $apiUrl = "http://api-findcreek.com";
 	// $cloudUrl = "http://cloud-findcreek.com";
 }
 
-function openConnection ($systemName) {
-	global $connection_apiFindcreek;
-	global $connection_findcreekId;
-	global $connection_mark;
-	global $dbConnectParams;
-
-	if ($systemName == 'findcreek_id') {
-		$connection_findcreekId = mysqli_connect(
-			$dbConnectParams[$systemName]['db_url'], 
-			$dbConnectParams[$systemName]['db_username'], 
-			$dbConnectParams[$systemName]['db_password'], 
-			$dbConnectParams[$systemName]['db_name']
-		);
-
-		$connection_findcreekId -> set_charset("utf8mb4");
-	}
-
-	if ($systemName == 'findcreek_api') {
-		$connection_apiFindcreek = mysqli_connect(
-			$dbConnectParams[$systemName]['db_url'], 
-			$dbConnectParams[$systemName]['db_username'], 
-			$dbConnectParams[$systemName]['db_password'], 
-			$dbConnectParams[$systemName]['db_name']
-		);
-
-		$connection_apiFindcreek -> set_charset("utf8mb4");
-	}
-
-	if ($systemName == 'findcreek_mark') {
-		$connection_mark = mysqli_connect(
-			$dbConnectParams[$systemName]['db_url'], 
-			$dbConnectParams[$systemName]['db_username'], 
-			$dbConnectParams[$systemName]['db_password'], 
-			$dbConnectParams[$systemName]['db_name']
-		);
-
-		$connection_mark -> set_charset("utf8mb4");
-	}
-}
-
-function closeConnection ($systemName) {
-	global $connection_apiFindcreek;
-	global $connection_findcreekId;
-	global $connection_mark;
-
-	if ($systemName == 'findcreek_id') {
-		mysqli_close($connection_findcreekId);
-	}
-
-	if ($systemName == 'findcreek_api') {
-		mysqli_close($connection_apiFindcreek);
-	}
-
-	if ($systemName == 'findcreek_mark') {
-		mysqli_close($connection_mark);
-	}
-}
