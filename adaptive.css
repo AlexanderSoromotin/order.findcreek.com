@@ -106,7 +106,6 @@
         display: none;
         width: 0;
     }
-
 }
 
 @media screen and (max-width: 450px) {
@@ -124,6 +123,18 @@
     }
     section.advantages .card {
         margin-right: 0 !important;
+    }
+    header .col-1 a h1 {
+        font-size: 1.2rem !important;
+    }
+    header .col-1 a img {
+        height: 30px !important;
+    }
+    header.fixed .header {
+        margin-top: 5px !important;
+    }
+    header.fixed {
+        height: 50px !important;
     }
 }
 
