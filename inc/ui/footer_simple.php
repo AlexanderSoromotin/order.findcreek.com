@@ -11,8 +11,6 @@
                 <a href="<?= $link ?>/#"><li>Реклама</li></a>
                 <a href="<?= $link ?>/#"><li>Настройки</li></a>
                 <a href="<?= $link ?>/#"><li>Продукты компании</li></a>
-                <a href="<?= $link ?>/#"><li></li></a>
-                <a href="<?= $link ?>/#"><li></li></a>
             </ul>
         </div>
         <div class="copyright">© FINDCREEK, Inc., <?= date('Y') ?>.</div>
@@ -60,6 +58,43 @@ footer .copyright {
     font-weight: 500;
     margin-top: 8px;
     margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1300px) {
+    footer .terms {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    footer ul {
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer ul li {
+        white-space: nowrap;
+        padding: 4px 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer .footer {
+        width: 100%;
+    }
+    footer ul {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer ul a {
+        text-align: center;
+    }
+    footer ul li {
+        margin-bottom: 5px;
+    }
+    footer .terms {
+        margin-bottom: 20px;
+    }
 }
 
 

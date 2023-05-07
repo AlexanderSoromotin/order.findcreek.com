@@ -122,11 +122,17 @@
     .section-title {
         margin-bottom: 40px;
     }
+    section.advantages .card {
+        margin-right: 0 !important;
+    }
 }
 
 @media screen and (max-width: 400px) {
     section.services .card {
         width: 90%;
+    }
+    section.order .send button {
+        width: 100%;
     }
 }
 @media screen and (max-width: 361px) {

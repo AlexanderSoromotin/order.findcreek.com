@@ -30,9 +30,7 @@
         </div>
         <div class="additional-data">
             <div class="user-info">
-                <div class="btn btn4">
-                    <a href="<?= $idUrl ?>/auth?redirectTo=<?= urlencode($link . '/authorise') ?>&returnToken=true" class="auth-button">Войти</a>
-                </div>
+                <a href="<?= $idUrl ?>/auth?redirectTo=<?= urlencode($link . '/authorise') ?>&returnToken=true" class="btn btn4 auth-button">Войти</a>
             </div>
         </div>
 	</div>
@@ -146,11 +144,15 @@
         text-decoration: none;
     }
 
+    .header .additional-data {
+        display: flex;
+        align-items: center;
+    }
     .header .user-info {
         /*position: absolute;*/
         /*right: 0;*/
     }
-    .header .user-info .btn {
+    .header .user-info .btn4 {
         width: 160px;
         border-radius: 20px;
         height: 35px;

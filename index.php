@@ -2,7 +2,7 @@
 	include_once "inc/config.php";
 //	include_once "inc/main.php";
 
-	$css_ver = 2;
+	$css_ver = 3;
 ?>
 
 <!DOCTYPE html>
@@ -27,16 +27,13 @@
         <section class="black hello">
             <div class="container">
                 <h2>Поможем создать <span class="colorized-text">сайт</span>, собрать <span class="colorized-text">дизайн сайта</span> или <span class="colorized-text">мобильного приложения</span></h2>
-                <h3>Теперь можно быстро найти необходимого человека в проект, а человеку найти проект, развивать проект и многое другое в одном месте!</h3>
+                <h3>
+                    Консультации по созданию сайтов и мобильных приложений, профессиональный дизайн, разработка функционала и техническая поддержка - мы предоставляем полный спектр услуг для вашего успешного онлайн-присутствия!</h3>
                 <div class="buttons">
-                    <div class="btn btn1">
-                        <a class="anchor" href="#order" anchorTo="order">Оставить заявку</a>
-                    </div>
 
-                    <div class="btn btn2">
-                        <div class="background"></div>
-                        <a class="anchor" href="#order" anchorTo="order">Узнать чуть больше</a>
-                    </div>
+                    <a class="btn btn1" href="#order" anchorTo="order">Оставить заявку</a>
+                    <a class="btn btn2" href="#order" anchorTo="order"><span>Узнать чуть больше</span></a>
+
             </div>
         </section>
 
@@ -54,9 +51,8 @@
                                 </div>
                             </div>
                             <div class="description">От 25000₽</div>
-                            <div class="btn btn3">
-                                <a class="anchor" href="#order" anchorTo="order">Оставить заявку</a>
-                            </div>
+                            <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
+
                         </div>
                     </div>
 
@@ -69,9 +65,8 @@
                                 </div>
                             </div>
                             <div class="description">От 25000₽</div>
-                            <div class="btn btn3">
-                                <a class="anchor" href="#order" anchorTo="order">Оставить заявку</a>
-                            </div>
+                            <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
+
                         </div>
                     </div>
 
@@ -84,9 +79,8 @@
                                 </div>
                             </div>
                             <div class="description">От 25000₽</div>
-                            <div class="btn btn3">
-                                <a class="anchor" href="#order" anchorTo="order">Оставить заявку</a>
-                            </div>
+                            <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
+
                         </div>
                     </div>
 
@@ -98,8 +92,8 @@
             <div class="container">
                 <h2 class="section-title"><b>Почему мы? </b>Всё просто</h2>
                 <div class="card-slider">
-                    <div class="card-slider-arrow arrow-left hidden"></div>
-                    <div class="card-slider-arrow arrow-right"></div>
+<!--                    <div class="card-slider-arrow arrow-left hidden"></div>-->
+<!--                    <div class="card-slider-arrow arrow-right"></div>-->
 
                     <div class="cards">
                         <div class="card">
@@ -237,9 +231,40 @@
             $(e.target).addClass('selected');
         })
 
-        function showSendOrderAnimation () {
+        var isMouseDown = false;
+        var startX, scrollLeft, margin;
+        var list = $('section.advantages .card-slider');
 
-        }
+        list.on('mousedown', function(e) {
+            isMouseDown = true;
+            startX = e.pageX - list.offset().left;
+            margin = Number(list.find('.cards').css('margin-left').replace('px', ''));
+            // console.log('margin = ', margin)
+
+        });
+
+        list.on('mousemove', function(e) {
+            if(!isMouseDown) return;
+            e.preventDefault();
+
+            endX = e.pageX - list.offset().left;
+            x = (startX - endX) * -1;
+            result = margin + x;
+
+            if (result > 0) return;
+            if (result < cardsBlockWidth * -1) return;
+
+            list.find('.cards').css({'margin-left': result});
+        });
+
+        list.on('mouseup', function(e) {
+            isMouseDown = false;
+        });
+
+        list.on('mouseleave', function(e) {
+            isMouseDown = false;
+        });
+
 
         hideFormErrors = setTimeout(() => {}, 10);
         function showFormError (inputName) {
@@ -301,9 +326,13 @@
             })
         })
 
-        $('a.anchor').click((e) => {
+        $('a[anchorTo], a[anchorTo] span').click((e) => {
             e.preventDefault();
             anchor = $(e.target).attr('anchorTo');
+            if (!anchor) {
+                anchor = $(e.target).parents('a').attr('anchorTo');
+            }
+
             console.log($(e.target))
             console.log(anchor)
             $('html, body').animate({scrollTop: $('#' + anchor).offset().top}, 600);
