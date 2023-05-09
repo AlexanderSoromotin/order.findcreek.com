@@ -6,12 +6,15 @@
         flex-direction: column;
 
     }
-}
-
-@media screen and (max-width: 900px) {
     header .header {
         padding: 0 20px !important;
         margin-top: 20px !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .col-2 {
+        display: none !important;
     }
     section.services .cards .card {
         margin-right: 0;
@@ -39,9 +42,6 @@
     }
 }
 @media screen and (max-width: 730px) {
-    header .col-2 {
-        display: none !important;
-    }
     section.hello {
         padding-top: 130px;
     }
@@ -87,6 +87,9 @@
 
 }
 @media screen and (max-width: 600px) {
+    header .col-1 span {
+        display: none !important;
+    }
     section.advantages .card-slider {
         margin-left: -20px;
     }
@@ -112,7 +115,7 @@
     section.order .order-form {
         padding: 2rem 2rem 2rem 2rem;
     }
-    section h2 {
+    section .section-title {
         font-size: 2.5rem !important;
     }
     section.order h3 {
@@ -135,6 +138,9 @@
     }
     header.fixed {
         height: 50px !important;
+    }
+    section.hello h1 {
+        line-height: 53px;
     }
 }
 

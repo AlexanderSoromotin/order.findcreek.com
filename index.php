@@ -2,7 +2,7 @@
 	include_once "inc/config.php";
 //	include_once "inc/main.php";
 
-	$css_ver = 5;
+	$css_ver = 6;
 ?>
 
 <!DOCTYPE html>
@@ -174,7 +174,7 @@
             </div>
         </section>
 
-        <div style="height: 500px" class="space"></div>
+        <div style="height: 200px" class="space"></div>
     </main>
 
 

@@ -90,7 +90,8 @@ footer .copyright {
         text-align: center;
     }
     footer ul li {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        font-size: 14px;
     }
     footer .terms {
         margin-bottom: 20px;

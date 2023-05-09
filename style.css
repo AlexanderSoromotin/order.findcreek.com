@@ -215,7 +215,7 @@ section.order .radio-buttons {
 section.order .radio-buttons button {
 	transition: .1s;
 	height: 40px;
-	padding: 0 50px;
+	padding: 0 15px;
 	border-radius: 13px;
 	border: 1px solid #615efe;
 	color: #615efe;
