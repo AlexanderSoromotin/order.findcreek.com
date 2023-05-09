@@ -124,7 +124,7 @@
     section.advantages .card {
         margin-right: 0 !important;
     }
-    header .col-1 a h1 {
+    header .col-1 a span {
         font-size: 1.2rem !important;
     }
     header .col-1 a img {
@@ -150,7 +150,7 @@
     :root {
         font-size: 14px;
     }
-    section.hello h2 {
+    section.hello h1 {
         line-height: 50px;
     }
     section.advantages .card-slider .card {

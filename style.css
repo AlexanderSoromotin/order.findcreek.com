@@ -63,7 +63,7 @@ section.hello {
 	padding-top: 200px;
 	padding-bottom: 100px;
 }
-section.hello h2 {
+section.hello h1 {
 	font-weight: 700;
 	color: #fff;
 	font-size: 2.75rem;
@@ -72,10 +72,10 @@ section.hello h2 {
 	line-height: 57px;
 	margin-bottom: 25px;
 }
-section.hello h2 span {
+section.hello h1 span {
 	font-weight: 700;
 }
-section.hello h3 {
+section.hello h2 {
 	font-weight: 400;
 	color: rgba(255, 255, 255, .9);
 	font-size: 1.0625rem;
@@ -181,7 +181,7 @@ section.advantages .card-slider .card h3 {
 	color: #7E7E7E;
 	margin-bottom: 15px;
 }
-section.advantages .card-slider .card h4 {
+section.advantages .card-slider .card p {
 	font-size: 1.25rem;
 	font-weight: 500;
 	color: #242424;

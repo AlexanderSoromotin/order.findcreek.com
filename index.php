@@ -2,7 +2,7 @@
 	include_once "inc/config.php";
 //	include_once "inc/main.php";
 
-	$css_ver = 4;
+	$css_ver = 5;
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +10,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>FINDCREEK Order</title>
-	<link rel="stylesheet" type="text/css" href="style.css?v=<?= $css_ver ?>">
+	<title>Разработка на заказ</title>
+    <meta name="description" content="Поможем создать сайт, собрать дизайн сайта или мобильного приложения.">
+    <meta name="keywords" content="сайт, создание сайтов, дизайн, разработка, разработка функционала, заказ, мобильное приложение, заявка, техническая поддержка, бизнес">
+
+    <link rel="stylesheet" type="text/css" href="style.css?v=<?= $css_ver ?>">
     <link rel="stylesheet" type="text/css" href="adaptive.css?v=<?= $css_ver ?>">
 
     <link rel="shortcut icon" href="<?= $link ?>/assets/img/findcreek_logo.svg" type="image/png">
@@ -26,9 +29,9 @@
 	<main>
         <section class="black hello">
             <div class="container">
-                <h2>Поможем создать <span class="colorized-text">сайт</span>, собрать <span class="colorized-text">дизайн сайта</span> или <span class="colorized-text">мобильного приложения</span></h2>
-                <h3>
-                    Консультации по созданию сайтов и мобильных приложений, профессиональный дизайн, разработка функционала и техническая поддержка - мы предоставляем полный спектр услуг для вашего успешного онлайн-присутствия!</h3>
+                <h1>Поможем создать <span class="colorized-text">сайт</span>, собрать <span class="colorized-text">дизайн сайта</span> или <span class="colorized-text">мобильного приложения</span></h1>
+                <h2>
+                    Консультации по созданию сайтов и мобильных приложений, профессиональный дизайн, разработка функционала и техническая поддержка - мы предоставляем полный спектр услуг для вашего успешного онлайн-присутствия!</h2>
                 <div class="buttons">
 
                     <a class="btn btn1" href="#order" anchorTo="order">Оставить заявку</a>
@@ -50,7 +53,7 @@
                                     <img src="<?= $link ?>/assets/img/website.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="description">От 25000₽</div>
+                            <div class="description">От 5000₽</div>
                             <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
 
                         </div>
@@ -64,7 +67,7 @@
                                     <img src="<?= $link ?>/assets/img/design.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="description">От 25000₽</div>
+                            <div class="description">От 5000₽</div>
                             <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
 
                         </div>
@@ -78,7 +81,7 @@
                                     <img src="<?= $link ?>/assets/img/application.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="description">От 25000₽</div>
+                            <div class="description">От 5000₽</div>
                             <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
 
                         </div>
@@ -99,42 +102,42 @@
                         <div class="card">
                             <div class="card-header"><h3>ПЕРСОНАЛИЗАЦИЯ</h3></div>
                             <div class="card-content">
-                                <h4>Мы создаем уникальные продукты, учитывая потребности каждого клиента и особенности их бизнеса.</h4>
+                                <p>Мы создаем уникальные продукты, учитывая потребности каждого клиента и особенности их бизнеса.</p>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-header"><h3>КАЧЕСТВО</h3></div>
                             <div class="card-content">
-                                <h4>Мы гарантируем высокое качество работы и удовлетворяем потребности клиентов, дорабатывая проект до полного удовлетворения.</h4>
+                                <p>Мы гарантируем высокое качество работы и удовлетворяем потребности клиентов, дорабатывая проект до полного удовлетворения.</p>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-header"><h3>ЭКСПЕРТНОСТЬ</h3></div>
                             <div class="card-content">
-                                <h4>Наши специалисты имеют опыт в разных областях веб-разработки и дизайна, следят за тенденциями и предлагают передовые решения.</h4>
+                                <p>Наши специалисты имеют опыт в разных областях веб-разработки и дизайна, следят за тенденциями и предлагают передовые решения.</p>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-header"><h3>ЦЕНЫ</h3></div>
                             <div class="card-content">
-                                <h4>Мы предлагаем конкурентоспособные цены без скрытых доплат, чтобы наши клиенты получили максимальную выгоду от нашей работы.</h4>
+                                <p>Мы предлагаем конкурентоспособные цены без скрытых доплат, чтобы наши клиенты получили максимальную выгоду от нашей работы.</p>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-header"><h3>СРОКИ</h3></div>
                             <div class="card-content">
-                                <h4>Мы всегда придерживаемся графика проекта и доставляем проект в срок</h4>
+                                <p>Мы всегда придерживаемся графика проекта и доставляем проект в срок</p>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-header"><h3>ИННОВАЦИИ</h3></div>
                             <div class="card-content">
-                                <h4>Мы используем Laravel для создания высококачественных и инновационных сайтов, соответствующих самым высоким требованиям.</h4>
+                                <p>Мы используем Laravel для создания высококачественных и инновационных сайтов, соответствующих самым высоким требованиям.</p>
                             </div>
                         </div>
 

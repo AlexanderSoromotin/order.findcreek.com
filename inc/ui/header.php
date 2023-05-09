@@ -10,7 +10,7 @@
             <div class="col-1">
                 <a href="<?= $link ?>">
                     <img src="<?= $link ?>/assets/img/findcreek_logo.svg" height="37px">
-                    <h1>FINDCREEK Order</h1>
+                    <span>FINDCREEK Order</span>
                 </a>
             </div>
 
@@ -32,6 +32,9 @@
             <div class="user-info">
                 <a href="<?= $idUrl ?>/auth?redirectTo=<?= urlencode($link . '/authorise') ?>&returnToken=true" class="btn btn4 auth-button">Войти</a>
             </div>
+            <div class="email">
+                <a href="mailto:info@findcreek.com">info@findcreek.com</a>
+            </div>
         </div>
 	</div>
 </header>
@@ -42,6 +45,32 @@
 </div>
 
 <script type="text/javascript">
+
+    $('.user-info').css({'display': 'none'});
+
+    if ($.cookie('token') != undefined) {
+        $.ajax({
+            url: "<?= $apiUrl ?>/id/auth.checkToken/",
+            method: "GET",
+            data: {
+                token: token
+            },
+            success: (result) => {
+                console.log('auth.checkToken', result);
+
+                if (result['response'] == 1) {
+                    $.cookie('token', token, {expires: 45, path: '/'});
+                    location.href = "<?= $link ?>";
+
+                } else {
+                    $('body').append("An error has occurred")
+                }
+            },
+            error: (result) => {
+                $('body').append("An error has occurred.")
+            },
+        })
+    }
 
 	function activeHeaderTab (className) {
 		$('header .header').removeClass('active')
@@ -105,7 +134,7 @@
         display: flex;
         align-items: center;
     }
-    header .header .col-1 h1 {
+    header .header .col-1 span {
         font-weight: 700;
         font-family: 'Montserrat', 'Findcreek', sans-serif;
         font-size: 22px;
@@ -157,6 +186,15 @@
         border-radius: 20px;
         height: 35px;
         font-size: 16px;
+    }
+
+    header .additional-data .email a {
+        transition: .1s;
+        color: #c3c3c3;
+        text-decoration: none;
+    }
+    header .additional-data .email a:hover {
+        color: #fff;
     }
 
 
