@@ -234,8 +234,10 @@ input {
 .btn3 {
 	position: relative;
 	transition: .1s;
-	font-weight: 800;
-	font-size: 1.0625rem;
+	font-weight: 500;
+	/*font-size: 1.0625rem;*/
+	/*font-size: 0.875rem;*/
+	font-size: 0.9375rem;
 	border-radius: 13px;
 	border: none;
 	height: 40px;
@@ -256,8 +258,10 @@ input {
 .btn4 {
 	position: relative;
 	transition: .1s;
-	font-weight: 800;
-	font-size: 1.0625rem;
+	font-weight: 500;
+	/*font-size: 1.0625rem;*/
+	/*font-size: 0.875rem;*/
+	font-size: 0.9375rem;
 	border-radius: 13px;
 	height: 40px;
 	width: 260px;

@@ -33,6 +33,7 @@
         width: 100%;
         margin-bottom: 15px;
         white-space: unset;
+        padding: 0 15px;
     }
     section.order input {
         width: 100% !important;

@@ -79,7 +79,7 @@ section.hello h2 {
 	font-weight: 400;
 	color: rgba(255, 255, 255, .9);
 	font-size: 1.0625rem;
-	width: 640px;
+	width: 800px;
 	max-width: 100%;
 	line-height: 27px;
 	margin-bottom: 60px;
@@ -215,11 +215,13 @@ section.order .radio-buttons {
 section.order .radio-buttons button {
 	transition: .1s;
 	height: 40px;
-	padding: 0 15px;
+	padding: 0 60px;
 	border-radius: 13px;
 	border: 1px solid #615efe;
 	color: #615efe;
-	font-size: 1.0625rem;
+	/*font-size: 1.0625rem;*/
+	/*font-size: 0.875rem;*/
+	font-size: 0.9375rem;
 	font-weight: 500;
 	background-color: transparent;
 	cursor: pointer;
@@ -282,7 +284,9 @@ section.order .send button {
 	border-radius: 13px;
 	border: none;
 	color: #fff;
-	font-size: 1.0625rem;
+	/*font-size: 1.0625rem;*/
+	/*font-size: 0.875rem;*/
+	font-size: 0.9375rem;
 	font-weight: 500;
 	background-color: #504CFE;
 	cursor: pointer;
