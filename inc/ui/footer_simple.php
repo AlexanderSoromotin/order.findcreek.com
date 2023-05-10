@@ -3,9 +3,9 @@
         <div class="terms">
             <ul>
                 <a href="<?= $link ?>/#"><li>О себе</li></a>
-                <a href="<?= $link ?>/#"><li>Политика конфиденциальности</li></a>
-                <a href="<?= $link ?>/#"><li>Условия пользования</li></a>
-                <a href="<?= $link ?>/#"><li>Политика в отношении файлов cookie</li></a>
+                <a target="_blank" href="https://cloud.findcreek.com/storage/647eb0cb2af18d1787cc77cdf3016887a16f24d3.pdf"><li>Политика конфиденциальности</li></a>
+                <a target="_blank" href="https://cloud.findcreek.com/storage/c717b506e4b1252708418001c6ab72e87759e6eb.pdf"><li>Условия пользования</li></a>
+                <a target="_blank" href="https://cloud.findcreek.com/storage/f961c8a1099de05ff4a47d5989d7dfc0e5596f97.pdf"><li>Политика в отношении файлов cookie</li></a>
                 <a href="<?= $link ?>/#"><li>Информация о рекламе</li></a>
                 <a href="<?= $link ?>/#"><li>Справочный центр</li></a>
                 <a href="<?= $link ?>/#"><li>Реклама</li></a>
