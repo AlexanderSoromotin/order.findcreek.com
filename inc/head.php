@@ -1,6 +1,6 @@
 <?
 	$scheme_css_ver = 1;
-	$main_css_ver = 6;
+	$main_css_ver = 7;
 	$fonts_css_ver = 1;
 ?>
 

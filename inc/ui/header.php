@@ -10,20 +10,23 @@
             <div class="col-1">
                 <a href="<?= $link ?>">
                     <img src="<?= $link ?>/assets/img/findcreek_logo.svg" height="37px">
-                    <span>FINDCREEK Order</span>
+                    <span>FINDCREEK Разработка</span>
                 </a>
             </div>
 
             <div class="col-2">
                 <ul>
-                    <a class="anchor" anchorTo="services" href="#services">
+                    <a class="anchor" anchorTo="services" href="<?= $link ?>#services">
                         <li>Услуги</li>
                     </a>
-                    <a class="anchor" anchorTo="advantages" href="#advantages">
-                        <li>О нас</li>
+<!--                    <a class="anchor" anchorTo="advantages" href="#advantages">-->
+<!--                        <li>О нас</li>-->
+<!--                    </a>-->
+                    <a class="anchor" anchorTo="order" href="<?= $link ?>#order">
+                        <li>Оставить заявку</li>
                     </a>
-                    <a class="anchor" anchorTo="order" href="#order">
-                        <li>Контакты</li>
+                    <a class="header-menu-examples" href="<?= $link ?>/examples">
+                        <li>Примеры</li>
                     </a>
                 </ul>
             </div>
@@ -32,9 +35,9 @@
             <div class="user-info">
                 <a href="<?= $idUrl ?>/auth?redirectTo=<?= urlencode($link . '/authorise') ?>&returnToken=true" class="btn btn4 auth-button">Войти</a>
             </div>
-            <div class="email">
-                <a href="mailto:info@findcreek.com">info@findcreek.com</a>
-            </div>
+<!--            <div class="email">-->
+<!--                <a href="mailto:info@findcreek.com">info@findcreek.com</a>-->
+<!--            </div>-->
         </div>
 	</div>
 </header>
@@ -165,6 +168,9 @@
         font-weight: 600;
         font-size: 20px;
         color: #7E7E7E;
+    }
+    header .col-2 ul li.selected {
+        color: #fff;
     }
     header .col-2 ul li:hover {
         color: #fff;

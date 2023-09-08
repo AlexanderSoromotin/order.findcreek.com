@@ -1,0 +1,89 @@
+@media screen and (max-width: 991px) {
+    header .user-info .btn {
+        display: none;
+    }
+    header .header {
+        padding: 0 20px !important;
+        margin-top: 20px !important;
+    }
+    section.hello .image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .col-2 {
+        display: none !important;
+    }
+    section.hello .hello-info h1 {
+        width: calc(100% - 180px);
+    }
+}
+@media screen and (max-width: 730px) {
+    section.hello {
+        padding-top: 130px;
+    }
+    .container {
+        padding: 0 45px !important;
+    }
+}
+@media screen and (max-width: 701px) {
+    .container {
+        padding: 0 20px !important;
+    }
+    section {
+        padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    section.hello .buttons .btn {
+        width: 100%;
+    }
+    section.hello .buttons .btn a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header .col-1 span {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    section .section-title {
+        font-size: 2.5rem !important;
+    }
+    .section-title {
+        margin-bottom: 40px;
+    }
+    header .col-1 a span {
+        font-size: 1.2rem !important;
+    }
+    header .col-1 a img {
+        height: 30px !important;
+    }
+    header.fixed .header {
+        margin-top: 5px !important;
+    }
+    header.fixed {
+        height: 50px !important;
+    }
+    section.hello h1 {
+        line-height: 53px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+}
+@media screen and (max-width: 361px) {
+    :root {
+        font-size: 14px;
+    }
+    section.hello h1 {
+        line-height: 50px;
+        font-size: 2rem;
+    }
+}

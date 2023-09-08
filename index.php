@@ -2,7 +2,7 @@
 	include_once "inc/config.php";
 //	include_once "inc/main.php";
 
-	$css_ver = 7;
+	$css_ver = 8;
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,10 @@
 
         <section id="services" class="white services">
             <div class="container">
-                <h2 class="section-title"><b>Услуги.</b> Мы Вам перезвоним</h2>
+                <h2 class="section-title">
+                    <b>Услуги</b>
+<!--                    Мы Вам перезвоним-->
+                </h2>
                 <div class="cards">
 
                     <div class="card">
@@ -53,7 +56,7 @@
                                     <img src="<?= $link ?>/assets/img/website.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="description">От 5000₽</div>
+                            <div class="description">От 30000₽</div>
                             <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
 
                         </div>
@@ -67,7 +70,7 @@
                                     <img src="<?= $link ?>/assets/img/design.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="description">От 5000₽</div>
+                            <div class="description">От 20000₽</div>
                             <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
 
                         </div>
@@ -81,7 +84,7 @@
                                     <img src="<?= $link ?>/assets/img/application.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="description">От 5000₽</div>
+                            <div class="description">От 25000₽</div>
                             <a class="btn btn3" href="#order" anchorTo="order">Оставить заявку</a>
 
                         </div>
