@@ -108,7 +108,7 @@
         width: 1440px !important;
         height: 40px;
         display: flex;
-        padding: 0px 60px;
+        padding: 0px 90px;
         margin-top: 55px;
         justify-content: space-between;
     }

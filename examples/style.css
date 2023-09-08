@@ -194,15 +194,18 @@ section.examples .slider .arrow {
 	background-size: 30px;
 	background-position: center center;
 	filter: invert(1);
+
 }
 section.examples .slider .arrow-left {
 	left: 20px;
+	padding-right: 2px;
 }
 section.examples .slider .arrow-left .arrow {
 	transform: rotate(180deg);
 }
 section.examples .slider .arrow-right {
 	right: 20px;
+	padding-left: 2px;
 }
 section.examples .slider .image.hidden-left {
 	display: none !important;

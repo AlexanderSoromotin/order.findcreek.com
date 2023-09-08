@@ -158,10 +158,14 @@
                 $(this).parents(".slider").find(".arrow-left").removeClass("hidden")
                 if ((listLeft * -1) < listWidth - imageWidth) {
                     listLeft -= imageWidth;
+                    if (listLeft % imageWidth != 0) {
+                        listLeft = Math.round(listLeft / imageWidth) * imageWidth;
+                    }
                     $(this).parents(".slider").find(".list").css({"left": `${listLeft}px`});
                 }
                 if ((listLeft * -1) >= listWidth - imageWidth) {
                     $(this).parents(".slider").find(".arrow-right").addClass("hidden")
+                    $(this).parents(".slider").find(".list").css({"left": `${(listWidth - imageWidth) * -1}px`});
                 }
             } else {
                 // Сдвиг вправо
@@ -169,10 +173,15 @@
 
                 if (listLeft < 0) {
                     listLeft += imageWidth;
+                    if (listLeft % imageWidth != 0) {
+                        listLeft = Math.round(listLeft / imageWidth) * imageWidth;
+                    }
+
                     $(this).parents(".slider").find(".list").css({"left": `${listLeft}px`});
                 }
                 if (listLeft >= 0) {
                     $(this).parents(".slider").find(".arrow-left").addClass("hidden")
+                    $(this).parents(".slider").find(".list").css({"left": `0px`});
                 }
             }
 
